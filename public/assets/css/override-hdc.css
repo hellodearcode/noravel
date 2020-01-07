@@ -1,0 +1,49 @@
+nav.navbar-default{
+	background-color: #175975 !important;
+	border-color: #175975 !important;
+}
+nav.navbar-default .navbar-nav > .active > a::after{
+	display: none !important;
+}
+nav.navbar-default .navbar-nav > .active > a, 
+nav.navbar-default .navbar-nav > .active > a:hover{
+	font-weight: bold !important;
+}
+nav.navbar-default .navbar-nav > li > a{
+	color: white !important;
+}
+nav.navbar-default .navbar-nav > li > a:hover{
+	color: #3399ff !important;
+}
+div.property-price {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 13px;
+    background: #279890 !important;
+}
+div.property-features {
+    padding: 2px 6px;
+    background: #279890 !important;
+    text-align: center;
+}
+a:link,a:visited,a {
+    color: #279890 !important;
+}
+#footer a:link,#footer a:visited,#footer a {
+    color: #44aaff !important;
+}
+div#subscribe {
+    color: white;
+    background: #175975;
+}
+div.heading-title h2{
+    border: none;
+}
+div.heading-title h2:after,
+div.heading-title h2:before{
+    display: none;
+}
+button.btn-primary{
+    background: #279890;
+    border-color: #279890;
+}
