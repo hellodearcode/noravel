@@ -65,7 +65,7 @@
     <script src="{{ URL::asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/masonry.pkgd.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.backstretch.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/jquery.nicescroll.min.js') }}"></script>
+    <!-- <script src="{{ URL::asset('assets/js/jquery.nicescroll.min.js') }}"></script> -->
     <script src="{{ URL::asset('assets/js/script.js') }}"></script>
     
     <script type="text/javascript">

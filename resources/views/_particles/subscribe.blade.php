@@ -56,7 +56,8 @@
               <span class="input-group-btn">
                 <div id="submitbutton">
                 	<button class="btn btn-primary btn-lg" type="submit" onClick="subscribe_user()">
-                		<i class="fa fa-envelope"></i>
+                    Send
+                		<!-- <i class="fa fa-envelope"></i> -->
                 	</button>
                 </div>
               </span>

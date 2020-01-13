@@ -109,16 +109,14 @@ Route::get('terms-conditions', 'IndexController@terms_conditions_page');
 
 Route::get('privacy-policy', 'IndexController@privacy_policy_page');
 
-Route::get('contact-us', 'IndexController@contact_us_page');
+Route::get('kundeservice', 'IndexController@contact_us_page');
 
-Route::post('contact-us', 'IndexController@contact_us_sendemail');
+Route::post('kundeservice', 'IndexController@contact_us_sendemail');
 
 
 Route::get('/', 'IndexController@index');
 
 Route::post('subscribe', 'IndexController@subscribe');
-
-Route::get('agents', 'AgentsController@index');
 
 Route::get('builders', 'AgentsController@builder_list');
 
@@ -126,9 +124,11 @@ Route::get('properties', 'PropertiesController@index');
 
 Route::get('featured', 'PropertiesController@featuredproperties');
 
-Route::get('sale', 'PropertiesController@saleproperties');
+// Route::get('agents', 'AgentsController@index');
 
-Route::get('rent', 'PropertiesController@rentproperties');
+// Route::get('sale', 'PropertiesController@saleproperties');
+
+// Route::get('rent', 'PropertiesController@rentproperties');
 
 Route::get('properties/{slug}', 'PropertiesController@propertysingle');
 
