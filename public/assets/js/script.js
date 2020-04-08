@@ -32,7 +32,7 @@ $(document).ready(function(){
 	});
 
 
-    /* nice scroll */
+    /* nice scroll 
     $( 'html' ).niceScroll({
         cursorcolor: '#434a54',
         cursorwidth: '10px',
@@ -41,7 +41,7 @@ $(document).ready(function(){
         scrollspeed: 200,
         zindex: 1060
     });
-
+*/
 
     /* carousel testimony */
     $('#testislider').carousel({

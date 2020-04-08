@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="heading-title">
-              <h2>Utvalge boliger</h2>
+              <h2>UTVALGTE BOLIGER</h2>
             </div>
           </div>
         </div>

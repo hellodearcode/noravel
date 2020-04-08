@@ -6,6 +6,22 @@
     background-repeat: no-repeat !important;
     background-size: contain !important;
   }
+  
+  .search_hdc input[type=search]{
+    font-size: 18px;
+    display:inline;
+    width:85%;
+    padding: 25px;
+  }
+  .search_hdc button{
+    margin-top: -5px;
+    padding: 11px;
+  }
+
+  .search_hdc{
+    margin-top: 10vh;
+  }
+
 </style>
 <!-- begin:header -->
     <div id="header" class="header-slide">
@@ -13,65 +29,32 @@
         <div class="row">
           <div class="col-md-12">
             <div class="quick-search">
+              <!-- Custom Search -->
               <div class="row">
-                 
-                 {!! Form::open(array('url' => array('searchproperties'),'name'=>'search_form','id'=>'search_form','role'=>'form')) !!}   
-                   
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-group">
-                      <label for="city">City</label>
-                      <select class="form-control" name="city_id">
-                        @foreach($city_list as $city)  
-						
-							<option value="{{$city->id}}">{{$city->city_name}}</option>
-										
-						@endforeach
-                         
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="purpose">Purpose</label>
-                      <select class="form-control" name="purpose">
-                        <option value="Sale">For Sale</option>
-                        <option value="Rent">For Rent</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="minprice">Min Price</label>
-                      <input type="text" name="min_price" class="form-control" placeholder="20000"> 
-                    </div>
+                <div class="col-sm-9 col-sm-push-2">
+                  {!! Form::open(array('method'=> 'get','url' => array('search/'),'name'=>'search_form','autocomplete'=>'off','id'=>'search_form','role'=>'form')) !!}   
+                  <div class="form-group search_hdc">
+                    <input type="search" name="keyword" class="form-control" placeholder="eiendom for salg">
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fa fa-search fa-2x"></i>
+                    </button>
                   </div>
-                  <!-- break -->
-                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-group">
-                      <label for="type">Type</label>
-                      <select class="form-control" name="type">
-                        @foreach(\App\Types::orderBy('types')->get() as $type)
-                        <option value="{{$type->id}}">{{$type->types}}</option>
-						@endforeach
-
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="maxprice">Max Price</label>
-                      <input type="text" name="max_price" class="form-control" placeholder="800000"> 
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-sm-12 col-xs-12"><input type="submit" name="submit" value="Search" class="btn btn-primary btn-lg btn-block"></div>
-
-                {!! Form::close() !!} 
+                  {!! Form::close() !!} 
+                </div>
               </div>
+              <!-- Custom search  -->
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- end:header -->
-
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <img src="https://via.placeholder.com/728x90.png?text=Advertise+Here" class="img-responsive" style="margin: 20px auto;">
+      @foreach($advertises as $i => $advertise)
+        <div class="col-md-12 text-center" style="margin-top: 15px;margin-bottom:15px">
+          <img src="{{ URL::asset('upload/advertises/'.$advertise->image_name.'.jpg') }}"/>
         </div>
+      @endforeach
       </div>
     </div>

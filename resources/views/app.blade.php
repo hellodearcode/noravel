@@ -22,7 +22,7 @@
     <link href="{{ URL::asset('assets/css/bootstrap.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
     <link href="{{ URL::asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
     
      
@@ -58,7 +58,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ URL::asset('assets/js/jquery.js') }}"></script>
     <script src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
-     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+     <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
     <script src="{{ URL::asset('assets/js/gmap3.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.easing.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.jcarousel.min.js') }}"></script>

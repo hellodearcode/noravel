@@ -30,7 +30,7 @@
 
             <a class="logo" href="{{ URL::to('/admin') }}" align="">
               
-            <img src="{{ URL::asset('upload/'.getcong('site_logo')) }}" alt="logo">
+            <img src="{{ URL::asset('upload/'.getcong('site_logo')) }}" alt="logo" width="100%">
             </a>
             <div class="panel panel-default panel-shadow">
                <!-- <div class="avatar">

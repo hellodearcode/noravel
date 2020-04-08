@@ -2703,7 +2703,16 @@ var unemployment = [{
         buttonName:'btn-default'
     });
 
-    $('#data-table').dataTable();
+    $('#data-table').dataTable({
+        "oLanguage": {
+            "sSearch": "Søk:",
+            "sLengthMenu": "Vis: _MENU_",
+            "oPaginate": {
+                "sNext" : "Neste",
+                "sPrevious": "Forrige"
+            }
+        }
+    });
 
     // activate showMail toggle for under 768 px;
     $('[data-toggle="showMail"]').on('click', function () {

@@ -5,7 +5,7 @@
 	<div class="page-header">
 		
 		 
-		<h2>Featured Properties</h2>
+		<h2>Featured Eiendommer</h2>
 	</div>
 	@if(Session::has('flash_message'))
 				    <div class="alert alert-success">

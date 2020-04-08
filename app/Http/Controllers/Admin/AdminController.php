@@ -8,6 +8,7 @@ use App\City;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Session;
 use Intervention\Image\Facades\Image; 
 

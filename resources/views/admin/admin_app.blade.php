@@ -38,7 +38,7 @@
  		   @yield("content")
  		   
 	 		<div class="footer">
-				<a href="{{ URL::to('admin/dashboard') }}" class="brand">
+				<a href="{{ URL::to('admin/Oversikt') }}" class="brand">
 					{{getcong('site_name')}}
 				</a>
 				<ul>

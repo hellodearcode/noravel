@@ -10,7 +10,7 @@
 							
 							@else
 								
-							<img src="{{ URL::asset('admin_assets/images/guy.jpg') }}" alt="person" class="img-circle" width="60"/>
+							<img src="{{ URL::asset('admin_assets/images/avatar-v2.png') }}" alt="person" class="img-circle" width="60"/>
 							
 							@endif
 			</div>
@@ -34,18 +34,20 @@
                
                @if(Auth::user()->usertype=='Admin')
                
-               		<li class="{{classActivePath('dashboard')}}"><a href="{{ URL::to('admin/dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+               		<li class="{{classActivePath('dashboard')}}"><a href="{{ URL::to('admin/dashboard') }}"><i class="fa fa-dashboard"></i> Oversikt</a></li>
                 
 	                <li class="{{classActivePath('types')}}"><a href="{{ URL::to('admin/types') }}"><i class="fa fa-tags"></i>Property Types</a></li>
 	                
-	                <li class="{{classActivePath('properties')}}"><a href="{{ URL::to('admin/properties') }}"><i class="md md-pin-drop"></i>Properties</a></li>
+	                <li class="{{classActivePath('properties')}}"><a href="{{ URL::to('admin/properties') }}"><i class="md md-pin-drop"></i>Eiendommer</a></li>
 					
 					<li class="{{classActivePath('featuredproperties')}}"><a href="{{ URL::to('admin/featuredproperties') }}"><i class="md md-star"></i>Featured</a></li>
 					 
-					<li class="{{classActivePath('inquiries')}}"><a href="{{ URL::to('admin/inquiries') }}"><i class="fa fa-send"></i>Inquiries</a></li> 
-					 
+					<li class="{{classActivePath('inquiries')}}"><a href="{{ URL::to('admin/inquiries') }}"><i class="fa fa-send"></i>Meldinger</a></li> 
+<!-- 					 
 	                <li class="{{classActivePath('slider')}}"><a href="{{ URL::to('admin/slider') }}"><i class="fa fa-sliders"></i>Home Slider</a></li>
-	                
+	                 -->
+					 <li class="{{classActivePath('advertise')}}"><a href="{{ URL::to('admin/advertise') }}"><i class="fa fa-sliders"></i>Reklame</a></li>
+
 					<li class="{{classActivePath('testimonials')}}"><a href="{{ URL::to('admin/testimonials') }}"><i class="fa fa-list"></i>Testimonials</a></li>
 	                
 					
@@ -63,13 +65,13 @@
                
                		   
                @else
-               		 <li class="{{classActivePath('dashboard')}}"><a href="{{ URL::to('admin/dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+               		 <li class="{{classActivePath('dashboard')}}"><a href="{{ URL::to('admin/dashboard') }}"><i class="fa fa-dashboard"></i> Oversikt</a></li>
                		 
-               		 <li class="{{classActivePath('properties')}}"><a href="{{ URL::to('admin/properties') }}"><i class="md md-pin-drop"></i>Properties</a></li>
+               		 <li class="{{classActivePath('properties')}}"><a href="{{ URL::to('admin/properties') }}"><i class="md md-pin-drop"></i>Eiendommer</a></li>
                		 
-               		 <li class="{{classActivePath('inquiries')}}"><a href="{{ URL::to('admin/inquiries') }}"><i class="md md-send"></i>Inquiries</a></li>
+               		 <li class="{{classActivePath('inquiries')}}"><a href="{{ URL::to('admin/inquiries') }}"><i class="md md-send"></i>Meldinger</a></li>
                		 
-               		 <li class="{{classActivePath('admin')}}"><a href="{{ URL::to('admin/profile') }}"><i class="md md-person-outline"></i> Account</a></li>				  
+               		 <li class="{{classActivePath('admin')}}"><a href="{{ URL::to('admin/profile') }}"><i class="md md-person-outline"></i> Konto</a></li>				  
                @endif
                   
  
@@ -96,7 +98,7 @@
 							
 							@else
 								
-							<img src="{{ URL::asset('admin_assets/images/guy.jpg') }}" alt="person" class="img-circle border-white" width="60"/>
+							<img src="{{ URL::asset('admin_assets/images/avatar-v2.png') }}" alt="person" class="img-circle border-white" width="60"/>
 							
 							@endif
 						</a>
@@ -108,7 +110,7 @@
 				</div>
 			</div>
 			<ul class="nav nav-sidebar" id="sidebar-menu">
-				<li><a href="{{ URL::to('admin/profile') }}"><i class="md md-person-outline"></i> Account</a></li>				 
+				<li><a href="{{ URL::to('admin/profile') }}"><i class="md md-person-outline"></i> Konto</a></li>				 
 				
 				@if(Auth::user()->usertype=='Admin')
 				

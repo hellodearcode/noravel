@@ -5,7 +5,9 @@
 			<button type="button" class="navbar-toggle visible-xs visible-sm collapsed pull-left" id="showLeftPush">
 				<i class="md md-menu"></i>
 			</button>
-			<a class="navbar-brand" href="{{ URL::to('admin/dashboard') }}">{{getcong('site_name')}}</a>
+			<a class="navbar-brand" href="{{ URL::to('admin/dashboard') }}" style="padding: 0px;">
+				<img src="{{ URL::asset('upload/'.getcong('site_logo')) }}" alt="logo" width="180px">
+			</a>
 			<button type="button" class="navbar-toggle pull-right" id="showRightPush">
 				<i class="md md-more-vert"></i>
 			</button>
@@ -16,7 +18,7 @@
 			 	 
 				<li>
 					<div class="btn-group navbar-btn">
-						<a href="{{ URL::to('/') }}" class="btn btn-success" target="_blank"><i class="md md-visibility"></i> View site</a>
+						<a href="{{ URL::to('/') }}" class="btn btn-success" target="_blank"><i class="md md-visibility"></i> Gå til forsiden</a>
 						 
 					</div>
 				</li>
@@ -29,7 +31,7 @@
 							
 							@else
 								
-							<img src="{{ URL::asset('admin_assets/images/guy.jpg') }}" alt="person" class="img-circle" width="40"/>
+							<img src="{{ URL::asset('admin_assets/images/avatar-v2.png') }}" alt="person" class="img-circle" width="40"/>
 							
 							@endif
 						

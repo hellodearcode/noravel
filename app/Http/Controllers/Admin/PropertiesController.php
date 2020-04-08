@@ -15,6 +15,7 @@ use Session;
 use Intervention\Image\Facades\Image; 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class PropertiesController extends MainAdminController
 {

@@ -33,7 +33,7 @@
             <!-- begin:product -->
             <div class="row container-realestate">
            	  @foreach($properties as $i => $property) 	
-              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12">
             <a href="{{URL::to('properties/'.$property->property_slug)}}">
               <div class="property-container">
                 <div class="property-image">
@@ -61,7 +61,6 @@
             </a>
           </div>
           <!-- break -->
-              <!-- break -->
            	  @endforeach
            	  
               

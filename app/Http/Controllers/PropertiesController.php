@@ -153,16 +153,32 @@ class PropertiesController extends Controller
 	    
 	    $inputs = $request->all();    	
     	  
-    	 
     	$properties = DB::table('properties')
                        ->where('status','1')  				   
-    				   ->where('property_type', '=', $inputs['type'])
-    				   ->where('property_purpose', '=', $inputs['purpose'])
-    				   ->where('property_name', 'like', '%'.$inputs['keyword'].'%')
+    				   ->where('property_type', '=', isset($inputs['type']) ? $inputs['type'] : '')
+    				   ->where('property_purpose', '=', isset($inputs['purpose']) ? $inputs['purpose'] : '')
+    				   ->orwhere('property_name', 'like', '%'.$inputs['keyword'].'%')
+    				   ->orwhere('address', 'like', '%'.$inputs['keyword'].'%')
     				   ->orderBy('id', 'desc')
-    				   ->get();
+					   ->get();
 					    	     	 			    
         return view('pages.searchproperties',compact('properties'));
-    }
+	}
+
+	public function searchkeywordpropertiesget()
+    {  
+		$query = explode('=',$_SERVER['QUERY_STRING']);
+		$query = $query[1];
+    	$properties = DB::table('properties')
+                       ->where('status','1')  				   
+    				   ->where('property_type', '=', isset($query) ? $query : '')
+    				   ->where('property_purpose', '=', isset($query) ? $query : '')
+    				   ->orwhere('property_name', 'like', '%'.$query.'%')
+    				   ->orwhere('address', 'like', '%'.$query.'%')
+    				   ->orderBy('id', 'desc')
+					   ->get();
+					    	     	 			    
+        return view('pages.searchproperties',compact('properties'));
+	}
 	
 }

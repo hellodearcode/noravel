@@ -38,12 +38,7 @@
                         <input type="text" name="property_name" value="{{ isset($property->property_name) ? $property->property_name : null }}" class="form-control">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Property Slug</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="property_slug" value="{{ isset($property->property_slug) ? $property->property_slug : null }}" class="form-control">
-                    </div>
-                </div>                
+                <input type="hidden" name="property_slug" value="">
 				<div class="form-group">
                     <label for="" class="col-sm-3 control-label">Property Type</label>
                     <div class="col-sm-4">
@@ -74,8 +69,9 @@
                         <select name="property_purpose" id="basic" class="selectpicker show-tick form-control" data-live-search="true" >		
 							@if(isset($property->property_purpose))
 								
-								<option value="Sale" @if($property->property_purpose=='Sale') selected @endif>Sale</option>
-								<option value="Rent" @if($property->property_purpose=='Rent') selected @endif>Rent</option>
+								<option value="New" @if($property->property_purpose=='New') selected @endif>Kommer for salg</option>
+								<option value="Sale" @if($property->property_purpose=='Sale') selected @endif>For Salg</option>
+								<option value="Rent" @if($property->property_purpose=='Rent') selected @endif>For Leie</option>
 								
 							@else	
 							

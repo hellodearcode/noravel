@@ -1,6 +1,6 @@
 @extends("app")
 
-@section('head_title', 'Properties For Rent | '.getcong('site_name') )
+@section('head_title', 'Eiendom For Leie | '.getcong('site_name') )
 @section('head_url', Request::url())
 
 @section("content")
@@ -11,11 +11,11 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 col-sm-12">
             <div class="page-title">
-              <h2>Properties For Rent</h2>
+              <h2>Eiendom for Leie</h2>
             </div>
             <ol class="breadcrumb">
               <li><a href="{{ URL::to('/') }}">Home</a></li> 
-              <li class="active">Properties For Rent</li>
+              <li class="active">Eiendom for Leie</li>
             </ol>
           </div>
         </div>
@@ -33,30 +33,34 @@
             <!-- begin:product -->
             <div class="row container-realestate">
            	  @foreach($properties as $i => $property) 	
-             	 <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="property-container">
-              <div class="property-image">
-                 
-                <img src="{{ URL::asset('upload/properties/'.$property->featured_image.'-s.jpg') }}" alt="{{ $property->property_name }}">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="{{URL::to('properties/'.$property->property_slug)}}">
+              <div class="property-container">
+                <div class="property-image">
+                    <div class="property-features">
+                      <span><i class="fa fa-home"></i> {{$property->area}}</span>
+                      <span><i class="fa fa-hdd-o"></i> {{$property->bedrooms}}</span>
+                      <span><i class="fa fa-male"></i> {{$property->bathrooms}}</span>
+                    </div>
+                  <img src="{{ URL::asset('upload/properties/'.$property->featured_image.'-s.jpg') }}" alt="{{ $property->property_name }}">
+                  <div class="property-status">
+                    <span>For {{$property->property_purpose}}</span>
+                  </div>
+                </div>
+                
+                <div class="property-content">
+                  <strong>{{ Str::limit($property->property_name,35) }}</strong><br>
+                    <small>{{ Str::limit($property->address,40) }}</small>
+                </div>
                 <div class="property-price">
-                  <h4>{{ getPropertyTypeName($property->property_type)->types }}</h4>
-                  <span>{{getcong('currency_sign')}}@if($property->sale_price) {{$property->sale_price}} @else {{$property->rent_price}} @endif</span>
-                </div>
-                <div class="property-status">
-                  <span>For {{$property->property_purpose}}</span>
-                </div>
+                    <p class="pull-left">{{ getPropertyTypeName($property->property_type)->types }}</p>
+                    <p class="pull-right">{{getcong('currency_sign')}}@if($property->sale_price) {{$property->sale_price}} @else {{$property->rent_price}} @endif</p>
+                    <div class="clearfix"></div>
+                  </div>
               </div>
-              <div class="property-features">
-                <span><i class="fa fa-home"></i> {{$property->area}}</span>
-                <span><i class="fa fa-hdd-o"></i> {{$property->bedrooms}}</span>
-                <span><i class="fa fa-male"></i> {{$property->bathrooms}}</span>
-              </div>
-              <div class="property-content">
-                <h3><a href="{{URL::to('properties/'.$property->property_slug)}}">{{ Str::limit($property->property_name,35) }}</a> <small>{{ Str::limit($property->address,40) }}</small></h3>
-              </div>
-            </div>
+            </a>
           </div>
-              <!-- break -->
+          <!-- break -->
            	  @endforeach
            	  
               

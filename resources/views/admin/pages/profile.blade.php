@@ -28,10 +28,10 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active">
-            <a href="#account" aria-controls="account" role="tab" data-toggle="tab">Account</a>
+            <a href="#account" aria-controls="account" role="tab" data-toggle="tab">Konto</a>
         </li>
         <li role="presentation">
-            <a href="#ac_password" aria-controls="ac_password" role="tab" data-toggle="tab">Password</a>
+            <a href="#ac_password" aria-controls="ac_password" role="tab" data-toggle="tab">Passord</a>
         </li>        
         </li>
     </ul>
@@ -42,7 +42,7 @@
             {!! Form::open(array('url' => 'admin/profile','class'=>'form-horizontal padding-15','name'=>'account_form','id'=>'account_form','role'=>'form','enctype' => 'multipart/form-data')) !!}
                 
                 <div class="form-group">
-                    <label for="avatar" class="col-sm-3 control-label">Profile Picture</label>
+                    <label for="avatar" class="col-sm-3 control-label">Profilbilde</label>
                     <div class="col-sm-9">
                         <div class="media">
                             <div class="media-left">
@@ -61,19 +61,19 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Name</label>
+                    <label for="" class="col-sm-3 control-label">Navn</label>
                     <div class="col-sm-9">
                         <input type="text" name="name" value="{{ Auth::user()->name }}" class="form-control" value="">
                     </div>
                 </div>
 				 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Email</label>
+                    <label for="" class="col-sm-3 control-label">Epost</label>
                     <div class="col-sm-9">
                         <input type="email" name="email" value="{{ Auth::user()->email }}" class="form-control" value="">
                     </div>
                 </div>
 				<div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Phone</label>
+                    <label for="" class="col-sm-3 control-label">Telefon</label>
                     <div class="col-sm-9">
                         <input type="text" name="phone" value="{{ Auth::user()->phone }}" class="form-control" value="">
                     </div>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">City</label>
+                    <label for="" class="col-sm-3 control-label">By</label>
                     <div class="col-sm-4">
                         <select name="city" id="basic" class="selectpicker show-tick form-control" data-live-search="true">
 										 
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">About</label>
+                    <label for="" class="col-sm-3 control-label">Om (Valgfritt)</label>
                     <div class="col-sm-9">
                          
 						<textarea name="about" cols="50" rows="5" class="form-control">{{ Auth::user()->about }}</textarea>
@@ -131,7 +131,7 @@
                 <hr>
                 <div class="form-group">
                     <div class="col-md-offset-3 col-sm-9 ">
-                    	<button type="submit" class="btn btn-primary">Save Changes <i class="md md-lock-open"></i></button>
+                    	<button type="submit" class="btn btn-primary">Lagre<i class="md md-lock-open"></i></button>
                          
                     </div>
                 </div>
@@ -143,13 +143,13 @@
             {!! Form::open(array('url' => 'admin/profile_pass','class'=>'form-horizontal padding-15','name'=>'pass_form','id'=>'pass_form','role'=>'form')) !!}
                 
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">New Password</label>
+                    <label for="" class="col-sm-3 control-label">New Passord</label>
                     <div class="col-sm-9">
                         <input type="password" name="password" value="" class="form-control" value="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Confirm Password</label>
+                    <label for="" class="col-sm-3 control-label">Confirm Passord</label>
                     <div class="col-sm-9">
                         <input type="password" name="password_confirmation" value="" class="form-control" value="">
                     </div>
@@ -158,7 +158,7 @@
                 <hr>
                 <div class="form-group">
                     <div class="col-md-offset-3 col-sm-9 ">
-                        <button type="submit" class="btn btn-primary">Save Changes <i class="md md-lock-open"></i></button>
+                        <button type="submit" class="btn btn-primary">Lagre <i class="md md-lock-open"></i></button>
                     </div>
                 </div>
 

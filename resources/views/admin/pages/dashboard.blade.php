@@ -4,7 +4,7 @@
 
 <div id="main">
 	<div class="page-header">
-		<h2>Overview</h2>
+		<h2>Oversikt</h2>
 	</div>
     
  
@@ -19,7 +19,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">Properties</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Eiendommer</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$properties_count}}
@@ -67,7 +67,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">Publish</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Publiserte</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$publish_properties}}
@@ -92,7 +92,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">UnPublish</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Upubliserte</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$unpublish_properties}}
@@ -116,7 +116,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">Inquiries</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Meldinger</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$inquiries}}
@@ -243,7 +243,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">Properties</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Eiendommer</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$properties_count}}
@@ -268,7 +268,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">Publish</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Publiserte</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$publish_properties}}
@@ -293,7 +293,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">UnPublish</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Upubliserte</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$unpublish_properties}}
@@ -318,7 +318,7 @@
                 <div class="media-left">
                     <div class="panel-body">
                         <div class="width-100">
-                            <h5 class="margin-none" id="graphWeek-y">Inquiries</h5>
+                            <h5 class="margin-none" id="graphWeek-y">Meldinger</h5>
 
                             <h2 class="margin-none" id="graphWeek-a">
                                 {{$inquiries}}

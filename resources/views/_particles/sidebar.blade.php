@@ -19,8 +19,8 @@
                 <div class="form-group">
                       <label for="purpose">Purpose</label>
                       <select class="form-control" name="purpose">
-                        <option value="Sale">For Sale</option>
-                        <option value="Rent">For Rent</option>
+                        <option value="Sale">For Salg</option>
+                        <option value="Rent">For Leie</option>
                       </select>
                </div>
                <div class="form-group">

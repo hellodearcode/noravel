@@ -4,7 +4,7 @@
 <div id="main">
 	<div class="page-header">
 		 
-		<h2>Inquiries</h2>
+		<h2>Meldinger</h2>
 	</div>
 	@if(Session::has('flash_message'))
 				    <div class="alert alert-success">
@@ -20,13 +20,13 @@
         <table id="data-table" class="table table-striped table-hover dt-responsive" cellspacing="0" width="100%">
             <thead>
 	            <tr>
-	                <th>Property ID</th>
-	                <th>Name</th>
-	                <th>Email</th>
-	                <th>Phone</th>
-	                <th>Message</th>
+	                <th>Eiendoms ID</th>
+	                <th>Navn</th>
+	                <th>Epost</th>
+	                <th>Telefon</th>
+	                <th>Melding</th>
 	                 
-	                <th class="text-center width-100">Action</th>
+	                <th class="text-center width-100">Handling</th>
 	            </tr>
             </thead>
 

@@ -34,9 +34,9 @@ div.property-features {
 a:link,a:visited,a {
     color: #279890 !important;
 }
-#footer a:link,#footer a:visited,#footer a {
+/* #footer a:link,#footer a:visited,#footer a {
     color: #44aaff !important;
-}
+} */
 div#subscribe {
     color: white;
     background: #175975;
@@ -54,3 +54,26 @@ button.btn-primary{
 }
 #subscribe input,#subscribe button{border-radius: 10px;}
 #footer{background-color: #175975 !important;}
+/* 1-2-2020 */
+#footer a,#footer p{color: white !important;font-size: 18px;}
+#footer a{font-weight: 600;}
+#footer ul{list-style: none;margin-left: 18%;}
+#footer .credits{padding: 15px;}
+
+@media screen and (max-width: 768px){
+    .hide-on-mobile{
+        display: none;
+    }
+    #footer{
+        text-align: center;
+    }
+    #footer ul{
+        margin-left: 13.5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    div.search_hdc input[type=search] {
+        width: 76%;
+    }
+}

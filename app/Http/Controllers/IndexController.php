@@ -9,6 +9,7 @@ use App\Properties;
 use App\Testimonials;
 use App\Subscriber;
 use App\Partners;
+use App\Advertise;
 
 use Mail;
 
@@ -36,9 +37,10 @@ class IndexController extends Controller
 		$testimonials = Testimonials::orderBy('id', 'desc')->get();
 		
 		$partners = Partners::orderBy('id', 'desc')->get();
-							   
-        return view('pages.index',compact('propertieslist','testimonials','partners','city_list'));
-    }
+        $advertises = Advertise::where('status','1')->orderBy('id', 'desc')->take(1)->get();
+        				   
+        return view('pages.index',compact('propertieslist','advertises','testimonials','partners','city_list'));
+   }
     
     public function subscribe(Request $request)
     {

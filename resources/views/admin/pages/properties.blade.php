@@ -7,7 +7,7 @@
 		<div class="pull-right">
 			<a href="{{URL::to('admin/properties/addproperty')}}" class="btn btn-primary">Legg til eiendom <i class="fa fa-plus"></i></a>
 		</div>
-		<h2>Properties</h2>
+		<h2>Eiendommer</h2>
 	</div>
 	@if(Session::has('flash_message'))
 				    <div class="alert alert-success">
@@ -23,13 +23,13 @@
         <table id="data-table" class="table table-striped table-hover dt-responsive" cellspacing="0" width="100%">
             <thead>
 	            <tr>
-	                <th>Property ID</th>
+	                <th>Eiendoms ID</th>
 	                <th>Agent</th>
-	                <th>Property Name</th>
-					<th>Type</th>
+	                <th>Annonseoverskrift</th>
+					<th>Eiendomstype</th>
 					<th>Purpose</th>
 	                <th class="text-center">Status</th> 
-	                <th class="text-center width-100">Action</th>
+	                <th class="text-center width-100">Handling</th>
 	            </tr>
             </thead>
 
@@ -56,7 +56,7 @@
                 <td class="text-center">
                 <div class="btn-group">
 								<button type="button" class="btn btn-default-dark dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									Actions <span class="caret"></span>
+								Handling <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu dropdown-menu-right" role="menu"> 
 									<li><a href="{{ url('admin/properties/addproperty/'.$property->id) }}"><i class="md md-edit"></i> Edit Editor</a></li>

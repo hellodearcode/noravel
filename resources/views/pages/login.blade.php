@@ -79,6 +79,16 @@
                         <div class="form-group">
                           <button type="submit" name="submit" class="btn btn-warning"><i class="fa fa-unlock-alt"></i> Sign in</button>
                         </div>
+                        <div class="form-group">
+                          <hr>
+                          <a href="{{ url('auth/google') }}">
+                               <img src="{{ url('upload/google-login.jpg') }}" width="180px">
+                             </a>
+                             &nbsp;&nbsp;&nbsp;
+                          <a href="{{ url('auth/facebook') }}">
+                               <img src="{{ url('upload/facebook-login.jpg') }}" width="180px">
+                             </a>
+                        </div>
                       {!! Form::close() !!}  
                       
                       <div class="form-group checkbox">                            

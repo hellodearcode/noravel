@@ -15,6 +15,10 @@
     return view('welcome');
 });*/
 
+Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
+
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 	
 	Route::get('/', [ 'as' => 'login', 'uses' => 'IndexController@index']);
@@ -36,11 +40,17 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 	Route::post('privacy_policy', 'SettingsController@privacy_policy_page');	
 	Route::post('headfootupdate', 'SettingsController@headfootupdate');
 	 
-	Route::get('slider', 'SliderController@sliderlist');	
-	Route::get('slider/addslide', 'SliderController@addeditSlide');	
-	Route::post('slider/addslide', 'SliderController@addnew');	
-	Route::get('slider/addslide/{id}', 'SliderController@editSlide');		
-	Route::get('slider/delete/{id}', 'SliderController@delete');
+	// Route::get('slider', 'SliderController@sliderlist');	
+	// Route::get('slider/addslide', 'SliderController@addeditSlide');	
+	// Route::post('slider/addslide', 'SliderController@addnew');	
+	// Route::get('slider/addslide/{id}', 'SliderController@editSlide');		
+	// Route::get('slider/delete/{id}', 'SliderController@delete');
+	Route::get('advertise', 'AdvertiseController@Advertiselist');	
+	Route::get('advertise/addadvertise', 'AdvertiseController@addeditadvertise');	
+	Route::post('advertise/addadvertise', 'AdvertiseController@addnew');	
+	Route::get('advertise/addadvertise/{id}', 'AdvertiseController@editadvertise');		
+	Route::get('advertise/delete/{id}', 'AdvertiseController@delete');
+
 	
 	
 	Route::get('testimonials', 'TestimonialsController@testimonialslist');	
@@ -139,6 +149,9 @@ Route::post('agentscontact', 'PropertiesController@agentscontact');
 Route::post('searchproperties', 'PropertiesController@searchproperties');
 
 Route::post('search', 'PropertiesController@searchkeywordproperties');
+Route::get('search', 'PropertiesController@searchkeywordpropertiesget');
+
+
 
 
 Route::get('login', 'IndexController@login');
